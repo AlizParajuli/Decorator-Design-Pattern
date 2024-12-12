@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Decorator_Design_Pattern
 {
-    internal class PlainDecorator
+    public class PlainDecorator : Decorator<string>
     {
+        public PlainDecorator(IComponent<string> component) : base(component) { }
+
+        public override string GetText()
+        {
+            return "-- " + base.GetText() + " --";
+        }
     }
 }
