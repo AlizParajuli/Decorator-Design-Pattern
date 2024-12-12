@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Decorator_Design_Pattern
 {
-    public class PlainDecorator : Decorator<string>
+    public class UpperCaseDecorator : Decorator<string>
     {
-        public PlainDecorator(IComponent<string> component) : base(component) { }
+        public UpperCaseDecorator(IComponent<string> component) : base(component) { }
 
         public override string GetText()
         {
-            return $"-- {base.GetText()} --";
+            return base.GetText().ToUpper();
         }
     }
 }
