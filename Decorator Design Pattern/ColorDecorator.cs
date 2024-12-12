@@ -12,6 +12,7 @@ namespace Decorator_Design_Pattern
 
         public override string GetText()
         {
+            // Add red color formatting to the base text
             return "\u001b[31m" + base.GetText() + "\u001b[0m";
         }
     }

@@ -15,6 +15,9 @@ namespace Decorator_Design_Pattern
             this.component = component;
         }
 
-        public abstract T GetText();
+        public virtual T GetText()
+        {
+            return component.GetText();
+        }
     }
 }
