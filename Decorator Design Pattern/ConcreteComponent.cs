@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Decorator_Design_Pattern
 {
-    internal class ConcreteComponent
+    public class ConcreteComponent : IComponent<string>
     {
+        public string GetText()
+        {
+            return "This is Concrete Component";
+        }
     }
 }
